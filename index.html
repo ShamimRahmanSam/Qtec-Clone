@@ -8,164 +8,846 @@
     <script src="/scripts.js" defer></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
 </head>
 <body>
 
-    <header>
-    <div class="container">
-        <nav class="nav">
-            <div class="logo">
-                <img src="/assets/logo.svg" alt="Qtec Logo">
-            </div>
+    <header class="header">
+		<div class="container">
+			<nav class="header-nav">
+				<a href="/" class="logo">
+					<img src="/assets/logo.svg" alt="logo">
+					<!-- FAVICON LINK -->
+				</a>
 
-            <ul>
-                <li class="home-link"><a href="#" target="_blank">Home</a></li>
-                <li><a href="#" target="_blank">About Us</a></li>
-                <li><a href="#" target="_blank">Case Studies</a></li>
-                <li><a href="#" target="_blank">Services</a></li>
-                <li><a href="#" target="_blank">Blogs</a></li>
-                <li><a href="#" target="_blank">E-book</a></li>
-                <li><a href="#" target="_blank">Career</a></li>
-                <li><a href="#" class="contact-btn" target="_blank">Contact Us</a></li>
-            </ul>
-            
-        </nav>
+				<!-- DESKTOP-MENU START -->
+				<div class="desktopmenu">
+					<ul class="desktoplist">
+						<li class="desktoplist-item">
+							<a href="/" class="desktoplist-link  active ">Home</a>
+						</li>
 
-        <div class="burger">
-            <img src="/assets/burger.png" alt="burger button">
-        </div>
-    </div>
-</header>
+						<li class="desktoplist-item">
+							<a href="/about-us/" class="desktoplist-link ">About Us</a>
+						</li>
 
+						<li class="desktoplist-item d-none">
+							<a href="/" class="desktoplist-link  active ">Services</a>
+						</li>
+
+						<li class="desktoplist-item">
+							
+							
+							<a href="/case-study-list/" class="desktoplist-link ">Case Studies</a>
+						</li>
+
+						<li class="desktoplist-item">
+							<a href="/services/" class="dropbtn desktoplist-link ">Services</a>
+			  
+							  <div class="desktopdropdown">
+								<ul class="dropdownlist">
+								  <li class="dropdownlist-item">
+									<a href="/staff-augmentation/" class="dropdownlist-link ">
+										 Staff Augmentation
+									</a>
+								  </li>
+								  <li class="dropdownlist-item">
+									<a href="/service-details/ui-ux-design/" class="dropdownlist-link ">
+									  UI /UX Design
+									</a>
+								  </li>
+								  <li class="dropdownlist-item">
+									<a href="/service-details/software-solutions-development/" class="dropdownlist-link ">
+									  Software Development
+									</a>
+								  </li>
+								  <li class="dropdownlist-item">
+									<a href="/service-details/mobile-application-development/" class="dropdownlist-link ">
+									  Mobile Application Development
+									</a>
+								  </li>
+								  <li class="dropdownlist-item">
+									<a href="/service-details/ecommerce-solutions/" class="dropdownlist-link ">
+									  E-commerce Development
+									</a>
+								  </li>
+								</ul>
+							  </div>
+						</li>
+						<li class="desktoplist-item">
+							<a href="/blogs/" class="desktoplist-link ">Blogs</a>
+						</li>
+						<li class="desktoplist-item">
+							<a href="/e-book/" class="desktoplist-link ">E-book</a> 
+						</li>
+                        <li class="desktoplist-item">
+							<a href="/career/" class="desktoplist-link ">Career</a>
+						</li>
+						<li class="desktoplist-item">
+							<a href="/contact-us/" class="btn-explore ">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+				<!-- DESKTOP-MENU END -->
+
+				<!-- HAMBURGER-MENU START -->
+				<div class="hamburgermenu">
+					<button type="button" class="btn-hamburger" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z"></path>
+							<path class="fill" d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z"></path>
+						</svg>
+					</button>
+				</div>
+				<!-- HAMBURGER-MENU END -->
+				 
+			</nav>
+		</div>
+	</header>
+
+
+<section class="gap"></section>
     
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-text">
-                <h1>Fully <span>Managed</span> <span> Development</span> Teams To Build Your Software</h1>
-                <p>Get your dream project designed, engineered, and delivered in perfectly planned time by highly expert software programmers, UI UX Designers using proven software development methodologies and testing. Our teams are built from the finest designers, programmers who build your software in record time and quality.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn">Explore Our Works</a>
-                    <div class="icon">
-                        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.87565 3.875H27.1257C27.4682 3.875 27.7968 4.01109 28.039 4.25332C28.2812 4.49555 28.4173 4.8241 28.4173 5.16667V25.8333C28.4173 26.1759 28.2812 26.5044 28.039 26.7467C27.7968 26.9889 27.4682 27.125 27.1257 27.125H3.87565C3.53308 27.125 3.20454 26.9889 2.9623 26.7467C2.72007 26.5044 2.58398 26.1759 2.58398 25.8333V5.16667C2.58398 4.8241 2.72007 4.49555 2.9623 4.25332C3.20454 4.01109 3.53308 3.875 3.87565 3.875ZM25.834 9.34908L15.5937 18.5199L5.16732 9.32067V24.5417H25.834V9.34908ZM5.82736 6.45833L15.5794 15.0634L25.1907 6.45833H5.82736Z" fill="white"></path>
-                        </svg>
+<section class="homebanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-12">
+                <div class="homebanner-details">
+                    <div class="homebanner-header" id="banner-header">
+                        <div class="banner-title">
+                            <h1 class="homebanner-title">
+                                Fully <span class="underline">Managed</span> <span class="underline">Development</span> Teams To Build
+                                Your Software
+                            </h1>
+                        </div>
+
+                        <div class="banner-info">
+                            <p class="banner-text">
+                                Get your dream project designed, engineered, and delivered in perfectly planned time
+                                by highly expert software programmers, UI UX Designers using proven software
+                                development methodologies and testing. Our teams are built from the finest
+                                designers, programmers who build your software in record time and quality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="homebanner-body" id="banner-body">
+                        <a href="#ourprojects_list" class="btn-explore k-hover2">Explore Our Works</a>
+
+                        <a href="/contact-us/" class="btn-contact k-hover2">
+                            <div class="icon">
+                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.87565 3.875H27.1257C27.4682 3.875 27.7968 4.01109 28.039 4.25332C28.2812 4.49555 28.4173 4.8241 28.4173 5.16667V25.8333C28.4173 26.1759 28.2812 26.5044 28.039 26.7467C27.7968 26.9889 27.4682 27.125 27.1257 27.125H3.87565C3.53308 27.125 3.20454 26.9889 2.9623 26.7467C2.72007 26.5044 2.58398 26.1759 2.58398 25.8333V5.16667C2.58398 4.8241 2.72007 4.49555 2.9623 4.25332C3.20454 4.01109 3.53308 3.875 3.87565 3.875ZM25.834 9.34908L15.5937 18.5199L5.16732 9.32067V24.5417H25.834V9.34908ZM5.82736 6.45833L15.5794 15.0634L25.1907 6.45833H5.82736Z" fill="white"></path>
+                                </svg>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class=" metrics">
-                <div class="metric">
-                    <h2>50+</h2>
-                    <p>Total Clients since 2019</p>
-                </div>
-                <div class="metric">
-                    <h2>100+</h2>
-                    <p>Total Projects since 2019</p>
+
+            <div class="col-lg-5 col-12 d-flex align-items-center">
+                <div class="homebanner-descriptions">
+                    <div class="card-banner">
+                        <div class="card-banner-header">
+                            <div class="cardcap"></div>
+                        </div>
+
+                        <div class="card-banner-body">
+                            <div class="titlebox">
+                                <h3 class="card-banner-title projectcounter" data-targets="50">50</h3> 
+                                <p>+</p>
+                            </div>
+                            <h4 class="card-banner-subtitle">Total Clients</h4>
+                            <h5 class="card-banner-text">since 2019</h5>
+                        </div>
+                    </div>
+
+                    <div class="card-banner cardlast">
+                        <div class="card-banner-header">
+                            <div class="cardcap"></div>
+                        </div>
+
+                        <div class="card-banner-body">
+                            <div class="titlebox">
+                                <h3 class="card-banner-title projectcounter" data-targets="100">100</h3> 
+                                <p>+</p>
+                            </div>
+                            <h4 class="card-banner-subtitle">Total Projects</h4>
+                            <h5 class="card-banner-text">since 2019</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-       
-    </section>
+    </div>
+</section>
 
 
-    <section class="about-section">
+
+<section class="homeinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-lg-auto">
+          <div class="homeinfo-content">
+            <div class="titlebox">
+              <h2 class="homeinfo-title">
+                Experienced And Proficient Team To Turn Your Dream Project
+                Into Reality
+              </h2>
+            </div>
+
+            <div class="textsbox">
+              <p class="homeinfo-text">
+                  Qtec Solution Limited has experience of more than 5 years in developing custom-made software projects for their clients. Over these five years, we have developed more than 100+ projects and they are running successfully. Our team members are very skilled and experienced in their respective fields. That made it possible for us to have more than 50 satisfied clients. Our proficient team members are dedicated to understanding the vision of our clients and turning them into real projects. We not only develop the project but also ensure the success of the project. Qtec Solution Limited is expert in developing customized e-commerce platforms, websites, and mobile applications. We use advanced technology to ensure the best service for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="client-logos-section">
         <div class="container">
-            <h2>Experienced And Proficient Team To Turn Your Dream Project Into Reality</h2>
-            <p>
-                Qtec Solution Limited has experience of more than 5 years in developing custom-made software projects for their clients. Over these five years, we have developed more than 100+ projects and they are running successfully. Our team members are very skilled and experienced in their respective fields. That made it possible for us to have more than 50 satisfied clients. Our proficient team members are dedicated to understanding the vision of our clients and turning them into real projects. We not only develop the project but also ensure the success of the project. Qtec Solution Limited is expert in developing customized e-commerce platforms, websites, and mobile applications. We use advanced technology to ensure the best service for our clients.
-            </p>
-        </div>
-        <div class="client-logos-section">
-            <div class="container">
-                <h3>Working with 50+ clients since 2019</h3>
-                <div class="client-logos">
-                    <img src="/assets/adora.png" alt="Client Logo 1">
-                    <img src="/assets/aion.png" alt="Client Logo 2">
-                    <img src="/assets/amarpay.png" alt="Client Logo 3">
-                    <img src="/assets/creative.png" alt="Client Logo 4">
-                    <img src="/assets/decoris.png" alt="Client Logo 5">
-                    <img src="/assets/dx.png" alt="Client Logo 1">
-                    <img src="/assets/hamdard.png" alt="Client Logo 2">
-                    <img src="/assets/K2s.png" alt="Client Logo 3">
-                    <img src="/assets/stylepoka.png" alt="Client Logo 5">
-                </div>
+            <h2>Working with 50+ clients since 2019</h2>
+           <br> <br>
+            <div class="client-logos">
+                <img src="/assets/adora.png" alt="Client Logo 1">
+                <img src="/assets/aion.png" alt="Client Logo 2">
+                <img src="/assets/amarpay.png" alt="Client Logo 3">
+                <img src="/assets/creative.png" alt="Client Logo 4">
+                <img src="/assets/decoris.png" alt="Client Logo 5">
+                <img src="/assets/dx.png" alt="Client Logo 6">
+                <img src="/assets/hamdard.png" alt="Client Logo 7">
+                <img src="/assets/K2s.png" alt="Client Logo 8">
+                <img src="/assets/stylepoka.png" alt="Client Logo 9">
+                <img src="/assets/adora.png" alt="Client Logo 10">
+                <img src="/assets/aion.png" alt="Client Logo 11">
+                <img src="/assets/amarpay.png" alt="Client Logo 12">
+                <img src="/assets/creative.png" alt="Client Logo 13">
+                <img src="/assets/decoris.png" alt="Client Logo 14">
+                <img src="/assets/dx.png" alt="Client Logo 15">
+                <img src="/assets/hamdard.png" alt="Client Logo 16">
+                <img src="/assets/K2s.png" alt="Client Logo 17">
+                <img src="/assets/stylepoka.png" alt="Client Logo 18">
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
 
-    <section class="services-section">
-        <h2>What Services we provide?</h2>
-        <div class="services-container">
-          <div class="service-buttons">
-            <button class="service-btn active-btn" data-target="#content1">Software Solutions Development</button>
-            <button class="service-btn" data-target="#content2">UI UX Design</button>
-            <button class="service-btn" data-target="#content3">Mobile Application Development</button>
-            <button class="service-btn" data-target="#content4">E-Commerce Solutions</button>
-            <button class="service-btn" data-target="#content5">LMS Solutions</button>
-            <button class="service-btn" data-target="#content6">Logistics Solutions</button>
+<section class="ourservices">
+  <div class="container">
+    <div class="ourservices-content">
+      <!-- OUR-PROJECTS HEADER START -->
+      <div class="ourservices-header">
+        <div class="row g-4">
+          <div class="col-lg-6 col-12 mx-auto">
+          <div class="servicesinfo">
+            <h2 class="services-title">What Services we provide?</h2>
           </div>
-          <div class="service-content active" id="content1">
-            <p>Got a kickass idea that can change and impact the whole internet? We got you covered and can take the whole responsibility for creating the full project...</p>
-            <img src="/assets/software-development.webp" alt="Software Solutions Development">
-          </div>
-          <div class="service-content" id="content2">
-            <p>Starting from how a user thinks to delivering what a user needs to use your dream product is what UX UI Design is all about...</p>
-            <img src="/assets/ui-ux.webp" alt="UI UX Design">
-          </div>
-          <div class="service-content" id="content3">
-            <p>We develop mobile applications for Android and iOS with native and cross-platform technologies...</p>
-            <img src="/assets/mobile-development.webp" alt="Mobile Application Development">
-          </div>
-          <div class="service-content" id="content4">
-            <p>Our e-commerce solutions help businesses reach their full potential...</p>
-            <img src="/assets/ecommece.webp" alt="E-Commerce Solutions">
-          </div>
-          <div class="service-content" id="content5">
-            <p>Our LMS solutions make learning management seamless and effective...</p>
-            <img src="/assets/lms.webp" alt="LMS Solutions">
-          </div>
-          <div class="service-content" id="content6">
-            <p>We provide logistics solutions that streamline operations and improve efficiency...</p>
-            <img src="/assets/logistic.webp" alt="Logistics Solutions">
           </div>
         </div>
-      </section>
-      
+        </div>
+        <!-- OUR-PROJECTS HEADER END -->
 
-      <section class="why-select-us">
-        <h2 class="section-title">Why do people select us?</h2>
-        <div class="cards-container">
-            <div class="card">
-                <div class="icons">
-                    <img src="/assets/icon1.svg" alt="Icon 1">
-                </div>
-                <h3>Expert Team Members</h3>
-                <p>100 out 100 times you will trust a team with experience in comparison to an inexperienced team to deliver you a dream project. Our portfolio and years of experience prove our expertise and command in this field.</p>
+      <!-- OUR-PROJECTS BODY START -->
+      <div class="ourservices-body">
+        <div class="row g-4">
+          <div class="col-lg-6 col-12">
+            <div class="services">
+              <div class="accordion" id="accordionService">
+                <ul class="nav nav-tabs" id="serviceTab" role="tablist">
+                  
+                   <li class="nav-item" role="presentation">
+                    <div class="nav-link active" id="softwaresolution-tab" data-bs-toggle="tab" data-bs-target="#softwaresolution" type="button" role="tab" aria-controls="softwaresolution" aria-selected="true">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-1">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                            Software Solutions Development
+                          </button>
+                        </h2>
+
+                        <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionService">
+                          <div class="accordion-body">
+                            <div>
+                              <p class="servicetext">
+                                Got a kickass idea that can change and impact the whole internet? We got you covered and can take the whole
+                                responsibility for creating the full project starting from design to development and then lifetime support.
+                              </p>
+
+                              <p class="servicetext">
+                                Any kind of enterprise software solutions, ecommerces, delivery management system, business management,
+                                learning applications are our core strength. Based on your super custom requirements, we can provide
+                                amazing full super fast and top notch solutions.
+                              </p>
+                            </div>
+
+                            <div class="service-buttons">
+                              <button onclick="location.href='/contact-us/'" class="btn-service">Discuss for your project</button>
+
+                              <a onclick="location.href='/service-details/software-solutions-development/'"><button class="btn-text">
+                                <span class="text">App that we have already build</span>
+
+                                <span class="icon">
+                                  <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1476 14.621L11.2371 27.5315L9.11609 25.4105L22.0251 12.5H10.6476V9.5H27.1476V26H24.1476V14.621Z" fill="#0876FC"></path>
+                                  </svg>
+                                </span>
+                              </button></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- UX-UI TAB ITEM -->
+                  <li class="nav-item" role="presentation">
+                    <div class="nav-link" id="uxuidesign-tab" data-bs-toggle="tab" data-bs-target="#uxuidesign" type="button" role="tab" aria-controls="uxuidesign" aria-selected="false">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-2">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                            UI UX Design
+                          </button>
+                        </h2>
+
+                        <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionService">
+                          <div class="accordion-body">
+                            <p class="servicetext">
+                              Starting from how a user thinks to delivering what a user needs to use your dream product is what UX UI Design
+                              is all about.  Our expert UI UX Designers analyse the user group, do user interviews and discussion and create
+                              the user flow accordingly. The final touch gets colour and theme before going to the production.
+                            </p>
+
+                            <div class="service-buttons">
+                              <button onclick="location.href='/contact-us/'" class="btn-service">Discuss for your project</button>
+
+                              <a onclick="location.href='/service-details/ui-ux-design/'" class="btn-text">
+                                <span class="text">App that we have already build</span>
+                                
+
+                                <span class="icon">
+                                  <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1476 14.621L11.2371 27.5315L9.11609 25.4105L22.0251 12.5H10.6476V9.5H27.1476V26H24.1476V14.621Z" fill="#0876FC"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- MOBILE APPLICATION TAB ITEM -->
+                  <li class="nav-item" role="presentation">
+                    <div class="nav-link" id="mobileapplication-tab" data-bs-toggle="tab" data-bs-target="#mobileapplication" type="button" role="tab" aria-controls="mibileapplication" aria-selected="false">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-3">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                            Mobile Application Development
+                          </button>
+                        </h2>
+
+                        <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionService">
+                          <div class="accordion-body">
+                            <p class="servicetext">
+                              Everybody looks for an App when you have a business digital or non digital.
+                              We use Flutter and Native technologies to develop super user friendly, fast
+                              and smooth mobile applications. Our expert engineers can deliver both iOS
+                              and Android applications on time.
+                            </p>
+
+                            <div class="service-buttons">
+                              <button onclick="location.href='/contact-us/'" class="btn-service">Discuss for your project</button>
+
+                              <a onclick="location.href='/service-details/mobile-application-development/'" class="btn-text">
+                                <span class="text">App that we have already build</span>
+
+                                <span class="icon">
+                                  <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1476 14.621L11.2371 27.5315L9.11609 25.4105L22.0251 12.5H10.6476V9.5H27.1476V26H24.1476V14.621Z" fill="#0876FC"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- ECOMMERCE TAB ITEM -->
+                   <li class="nav-item" role="presentation">
+                    <div class="nav-link" id="ecommercesolutions-tab" data-bs-toggle="tab" data-bs-target="#ecommercesolutions" type="button" role="tab" aria-controls="ecommercesolutions" aria-selected="false">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-4">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
+                            E-Commerce Solutions
+                          </button>
+                        </h2>
+
+                        <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#accordionService">
+                          <div class="accordion-body">
+                            <p class="servicetext">
+                              Ecommerce Software development is our very core skill. We have developed more than 10 large scale
+                              ecommerce projects with numerous modules. With time our ecommerce engine matured to a great level.
+                              Our ecommerce software solutions includes frontend application, backend application, android and
+                              ios applications. Each application runs separately and communicates using REST API. The scalability
+                              of our solutions give our clients upper hand in the market.
+                            </p>
+
+                            <div class="service-buttons">
+                              <button onclick="location.href='/contact-us/'" class="btn-service">Discuss for your project</button>
+
+                              <a onclick="location.href='/service-details/ecommerce-solutions/'" class="btn-text">
+                                <span class="text">App that we have already build</span>
+
+                                <span class="icon">
+                                  <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1476 14.621L11.2371 27.5315L9.11609 25.4105L22.0251 12.5H10.6476V9.5H27.1476V26H24.1476V14.621Z" fill="#0876FC"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- LMS SOLUTIONS TAB ITEM -->
+                  <li class="nav-item" role="presentation">
+                    <div class="nav-link" id="lmssolutions-tab" data-bs-toggle="tab" data-bs-target="#lmssolutions" type="button" role="tab" aria-controls="lmssolutions" aria-selected="false">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-5">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                            LMS Solutions
+                          </button>
+                        </h2>
+
+                        <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#accordionService">
+                          <div class="accordion-body">
+                            <p class="servicetext">
+                              Learning Management System software development is something we are very good at.
+                              We have developed several Elearning solutions for our clients and have become very
+                              expert in this industry. Our in- depth understanding of the industry gives us extra
+                              advantage to help our clients reach the designed goal with scalable technology.
+                            </p>
+
+                            <div class="service-buttons">
+                              <button onclick="location.href='/contact-us/'" class="btn-service">Discuss for your project</button>
+
+                              <a onclick="location.href='/service-details/lms-solutions/'" class="btn-text">
+                                <span class="text">App that we have already build</span>
+
+                                <span class="icon">
+                                  <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1476 14.621L11.2371 27.5315L9.11609 25.4105L22.0251 12.5H10.6476V9.5H27.1476V26H24.1476V14.621Z" fill="#0876FC"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- LOGISTICS SOLUTIONS TAB ITEM -->
+                  <li class="nav-item" role="presentation">
+                    <div class="nav-link" id="logistics-tab" data-bs-toggle="tab" data-bs-target="#logistics" type="button" role="tab" aria-controls="logistics" aria-selected="false">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-6">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+                            Logistics Solutions
+                          </button>
+                        </h2>
+
+                        <div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6" data-bs-parent="#accordionService">
+                          <div class="accordion-body">
+                            <p class="servicetext">
+                              In the past couple of years Qtec Solution Limited has developed multiple logistics solutions for
+                              local and international companies. We developed custom logistics solutions using Google Maps,
+                              generating routing, fulfilling deliveries and many more. We have an amazing understanding of
+                              what we have developed for past clients. Our experience puts us ahead in the market to accelerate
+                              our client’s needs the way they want.
+                            </p>
+
+                            <div onclick="active_tab('uxui-tab')" class="service-buttons">
+                              <button onclick="location.href='/contact-us/'" class="btn-service">Discuss for your project</button>
+
+                              <a onclick="location.href='/service-details/logistics-solutions/'" class="btn-text">
+                                <span class="text">App that we have already build</span>
+
+                                <span class="icon">
+                                  <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.1476 14.621L11.2371 27.5315L9.11609 25.4105L22.0251 12.5H10.6476V9.5H27.1476V26H24.1476V14.621Z" fill="#0876FC"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="card">
-                <div class="icons">
-                    <img src="/assets/icon2.png" alt="Icon 2">
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="tab-content" id="serviceTabContent">
+              <!-- SOFTWARE SOLUTIONS TAB CONTENT START -->
+              <div class="tab-pane fade show active" id="softwaresolution" role="tabpanel" aria-labelledby="softwaresolution-tab">
+                <div class="tab-thumbnail">
+                  <img src="/assets/software-development.webp" alt="software-thumbnail">
                 </div>
-                <h3>Professional Communication</h3>
-                <p>We guide our clients throughout the whole project and never keep them in darkness with our professional communication. You will never feel isolated from us throughout the whole journey, as our communication makes you feel like you are one of us.</p>
-            </div>
-            <div class="card">
-                <div class="icons">
-                    <img src="/assets/icon3.png" alt="Icon 3">
+              </div>
+              <!--- SOFTWARE SOLUTIONS TAB CONTENT END --->
+
+              <!-- UX-UI DESIGN TAB CONTENT START -->
+              <div class="tab-pane fade" id="uxuidesign" role="tabpanel" aria-labelledby="uxuidesign-tab">
+                <div class="tab-thumbnail">
+                  <img src="/assets/ui-ux.webp" alt="uxui-thumbnail">
                 </div>
-                <h3>Transparency of Work Process</h3>
-                <p>How would you feel if the agency you awarded the project is not transparent with you? Not good for sure! We update visible progress, images, and task gist frequently with our clients. The whole development and design process is transparent to our clients.</p>
-            </div>
-            <div class="card">
-                <div class="icons">
-                    <img src="/assets/icon4.png" alt="Icon 4">
+              </div>
+              <!--- UX-UI DESIGN TAB CONTENT END --->
+
+              <!-- MOBILE-APPLICATION TAB CONTENT START -->
+              <div class="tab-pane fade" id="mobileapplication" role="tabpanel" aria-labelledby="mobileapplication-tab">
+                <div class="tab-thumbnail">
+                  <img src="/assets/mobile-development.webp" alt="mobile-thumbnail">
                 </div>
-                <h3>Timely Product Delivery</h3>
-                <p>We know how important the time is for a product to go live and plan business accordingly. We commit to on-time delivery for the project we took on hand. Throughout the whole process, the client has the whole timeline in picture.</p>
+              </div>
+              <!--- MOBILE-APPLICATION TAB CONTENT END --->
+
+              <!-- E-COMMERCE SOLUTIONS TAB CONTENT START -->
+              <div class="tab-pane fade" id="ecommercesolutions" role="tabpanel" aria-labelledby="ecommercesolutions-tab">
+                <div class="tab-thumbnail">
+                  <img src="/assets/ecommece.webp" alt="software-thumbnail">
+                </div>
+              </div>
+              <!--- E-COMMERCE SOLUTIONS TAB CONTENT END --->
+
+              <!-- LMS SOLUTIONS TAB CONTENT START -->
+              <div class="tab-pane fade" id="lmssolutions" role="tabpanel" aria-labelledby="lmssolutions-tab">
+                <div class="tab-thumbnail">
+                  <img src="/assets/lms.webp" alt="uxui-thumbnail">
+                </div>
+              </div>
+              <!--- LMS SOLUTIONS TAB CONTENT END --->
+
+              <!-- LOGISTICS SOLUTIONS TAB CONTENT START -->
+              <div class="tab-pane fade" id="logistics" role="tabpanel" aria-labelledby="logistics-tab">
+                <div class="tab-thumbnail">
+                  <img src="/assets/logistic.webp" alt="logistics-thumbnail">
+                </div>
+              </div>
+              <!--- LOGISTICS SOLUTIONS TAB CONTENT END --->
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <!-- OUR-PROJECTS BODY END -->
+    </div>
+  </div>
+</section>
+
+
+<section class="home-features" id="features-wrapper">
+  <div class="container">
+    <div class="home-features-content">
+      <!-- HOME-FEATURES HEADER START -->
+      <div class="home-features-header">
+        <div class="row g-4">
+        <div class="col-lg-6 col-12 mx-auto">
+          <div class="featureinfo">
+          <h2 class="home-features-title">Why do people select us?</h2>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- HOME-FEATURES HEADER END -->
+
+      <!-- HOME-FEATURES BODY START -->
+      <div class="home-features-body" id="features-content">
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="card-feature feature-1">
+              <div class="card-feature-header">
+                <div class="card-cap">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g>
+                      <g xmlns="http://www.w3.org/2000/svg">
+                        <path d="m139.442 407.783 68.558-39.584-30-52.051-30-52.05-68.925 39.771c-2.013-10.86-3.075-21.824-3.075-32.869 0-26.656 6.068-52.597 17.477-76.571l-52.039-30.214c-16.578 33.274-25.438 69.459-25.438 106.785 0 43.667 11.882 84.534 32.274 119.894 39.113 67.82 110.12 115.992 192.726 121.106v-61.758c-37.852-3.14-73.09-18.214-101.558-42.459z" fill="#57d9ad" data-original="#57d9ad"></path>
+                        <path d="m241 512v-61.758c-37.852-3.14-73.09-18.214-101.558-42.458l68.558-39.584-30-52.051-129.726 74.745c39.113 67.82 110.12 115.992 192.726 121.106z" fill="#26bfa6" data-original="#26bfa6"></path>
+                        <path d="m470.717 164.44-52.136 30.245c11.832 24.796 17.419 50.785 17.419 76.315 0 11.038-1.06 22.013-3.082 32.91l-68.919-39.811-30 52.05-30 52.051 68.621 39.532c-28.469 24.267-63.732 39.366-101.62 42.51v61.758c82.604-5.114 153.611-53.282 192.726-121.104 20.392-35.358 32.274-76.227 32.274-119.896 0-36.414-8.286-72.697-25.283-106.56z" fill="#ffea80" data-original="#ffea80"></path>
+                        <path d="m470.717 164.44-52.136 30.245c11.832 24.796 17.419 50.785 17.419 76.315 0 11.038-1.06 22.013-3.082 32.91l-68.919-39.811-30 52.05 129.727 74.747c20.392-35.358 32.274-76.227 32.274-119.896 0-36.414-8.286-72.697-25.283-106.56z" fill="#ffcc66" data-original="#ffcc66"></path>
+                        <g>
+                          <path d="m256 31c-77.054 0-151.705 36.216-199.799 107.1l52.2 30.298c20.14-29.678 51.487-54.033 87.599-66.899v79.501h60 60v-79.501c34.243 12.2 65.83 35.121 87.599 67.2l52.2-30.3c-37.421-60.288-113.214-107.399-199.799-107.399z" fill="#f25555" data-original="#f25555"></path>
+                          <path d="m316 101.499c34.243 12.2 65.83 35.121 87.599 67.2l52.2-30.3c-37.421-60.288-113.214-107.399-199.799-107.399v150h60z" fill="#d93752" data-original="#d93752"></path>
+                          <path d="m256 0c-24.853 0-45 21.147-45 46s20.147 45 45 45 45-20.147 45-45-20.147-46-45-46z" fill="#ffe6cc" data-original="#ffe6cc"></path>
+                          <path d="m301 46c0-24.853-20.147-46-45-46v91c24.853 0 45-20.147 45-45z" fill="#ffccb3" data-original="#ffccb3" class=""></path>
+                        </g>
+                        <path d="m102.365 359.727c-12.973-22.473-41.732-27.997-61.214-16.69-21.553 12.398-28.932 39.955-16.494 61.465 12.272 21.246 39.725 29.015 61.479 16.465 20.186-11.629 29.594-38.075 16.229-61.24z" fill="#ffe6cc" data-original="#ffe6cc"></path>
+                        <path d="m86.137 420.967c20.186-11.628 29.594-38.075 16.229-61.24l-77.708 44.775c12.271 21.246 39.724 29.015 61.479 16.465z" fill="#ffccb3" data-original="#ffccb3"></path>
+                        <path d="m470.845 343.021c-22.453-12.964-48.611-4.104-61.457 16.565-11.938 19.213-6.288 48.252 16.471 61.379 21.806 12.586 49.285 4.647 61.479-16.465 12.291-21.282 5.322-48.887-16.493-61.479z" fill="#e77b45" data-original="#e77b45"></path>
+                        <path d="m470.845 343.021c-22.453-12.964-48.611-4.104-61.457 16.565l77.951 44.914c12.29-21.282 5.321-48.887-16.494-61.479z" fill="#cc5229" data-original="#cc5229"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-feature-body">
+                <h3 class="feature-title">Expert Team members</h3>
+
+                <p class="feature-text">
+                  100 out 100 times you will trust a team with experience in
+                  comparison to an inexperienced team to deliver you dream project. Our portfolio
+                  and years of experience proves our expertise and command in this field.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="card-feature feature-2">
+              <div class="card-feature-header">
+                <div class="card-cap">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g>
+                      <g xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <path d="m.108 70.824v234.83c0 31.314 25.482 56.789 56.803 56.789h46.439v-29.973c-9.526 0-17.275-7.745-17.275-17.265s7.75-17.264 17.275-17.264h66.965l34.41-81.308-34.41-145.809z" fill="#674cc3" data-original="#674cc3"></path>
+                          <path d="m341.103 218.514-154.24-147.69h-16.549v227.117h170.789z" fill="#68339f" data-original="#68339f"></path>
+                        </g>
+                        <g>
+                          <g>
+                            <g>
+                              <path d="m73.867 141.648h114.584v29.972h-114.584z" fill="#68339f" data-original="#68339f"></path>
+                            </g>
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <g>
+                              <path d="m170.314 233.414h-96.447v-29.972h114.584z" fill="#68339f" data-original="#68339f"></path>
+                            </g>
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <g>
+                              <g>
+                                <path d="m250.397 512h-117.603v-31.383c0-32.424 26.378-58.802 58.802-58.802s58.802 26.378 58.802 58.802v31.383z" fill="#fff768" data-original="#fff768"></path>
+                              </g>
+                            </g>
+                          </g>
+                          <g>
+                            <g>
+                              <g>
+                                <path d="m411.366 512h-117.603v-31.383c0-32.424 26.378-58.802 58.802-58.802s58.802 26.378 58.802 58.802v31.383z" fill="#7cbdff" data-original="#7cbdff"></path>
+                              </g>
+                            </g>
+                          </g>
+                          <path d="m170.612 399.086c2.062 17.359 14.934 31.955 32.425 35.249 25.789 4.856 48.395-14.891 48.395-39.819v-20.643c0-2.594-.257-5.128-.725-7.589l-56.606-6.915z" fill="#ffd8aa" data-original="#ffd8aa"></path>
+                          <path d="m293.763 366.283v28.232c0 24.928 22.606 44.675 48.395 39.819 18.412-3.467 31.709-19.458 32.662-38.012l-24.497-36.954z" fill="#ffc490" data-original="#ffc490"></path>
+                          <path d="m374.879 374.165c0-18.841-12.76-35.619-31.135-39.783h-49.981v31.902h39.643l41.413 30.038c.036-.708.06-1.418.06-2.132z" fill="#fff768" data-original="#fff768"></path>
+                          <path d="m201.45 334.382c-18.375 4.164-31.135 20.942-31.135 39.783v20.025c0 1.652.106 3.285.297 4.896l44.303-32.802h35.791c-4.119-21.664-25.512-37.282-49.256-31.902z" fill="#ff9445" data-original="#ff9445"></path>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="m170.314 0v233.5h170.789l52.869-114.476-52.869-119.024z" fill="#d9b3ff" data-original="#d9b3ff"></path>
+                          </g>
+                          <path d="m341.103 0v233.5h87.547c9.526 0 17.276 7.745 17.276 17.264s-7.75 17.264-17.276 17.264v29.972h26.439c31.322 0 56.803-25.475 56.803-56.788v-241.212z" fill="#bb99ff" data-original="#bb99ff"></path>
+                          <g fill="#b9f">
+                            <path d="m304.25 70.824v29.972h36.853l24.135-14.986-24.135-14.986z" fill="#bb99ff" data-original="#bb99ff"></path>
+                            <path d="m242.16 161.645h98.943l27.848-12.645-27.848-17.327h-98.943z" fill="#bb99ff" data-original="#bb99ff"></path>
+                          </g>
+                          <g>
+                            <g>
+                              <g>
+                                <path d="m243.417 70.824h29.936v29.972h-29.936z" fill="#bb99ff" data-original="#bb99ff"></path>
+                              </g>
+                            </g>
+                          </g>
+                          <g fill="#a467ff">
+                            <path d="m341.103 70.824h96.609v29.972h-96.609z" fill="#a467ff" data-original="#a467ff"></path>
+                            <path d="m341.103 131.673h96.609v29.972h-96.609z" fill="#a467ff" data-original="#a467ff"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-feature-body">
+                <h3 class="feature-title">Professional Communication</h3>
+
+                <p class="feature-text">
+                  We guide our clients throughout the whole project
+                  and never keep in darkness with our professional communication. You will never
+                  feel isolated from us throughout the whole journey as our communication makes
+                  you feel like you are one of us.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="card-feature feature-3">
+              <div class="card-feature-header">
+                <div class="card-cap">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                    <g>
+                      <g xmlns="http://www.w3.org/2000/svg">
+                        <path d="m383.3 242.963h-15.866c-3.493 0-6.552-2.338-7.469-5.708-1.883-6.915-4.625-13.475-8.105-19.559-1.738-3.038-1.237-6.857 1.237-9.332l11.223-11.223c3.081-3.081 3.081-8.077 0-11.158l-12.09-12.09c-3.081-3.081-8.077-3.081-11.158 0l-11.223 11.223c-2.475 2.475-6.294 2.975-9.332 1.237-6.084-3.481-12.644-6.223-19.559-8.105-3.37-.918-5.709-3.976-5.709-7.469v-15.867c0-4.358-3.532-7.89-7.89-7.89h-17.098c-4.358 0-7.89 3.533-7.89 7.89v15.867c0 3.493-2.338 6.552-5.709 7.469-6.915 1.882-13.475 4.625-19.559 8.105-3.038 1.738-6.857 1.237-9.332-1.237l-11.223-11.223c-3.081-3.081-8.077-3.081-11.158 0l-12.09 12.09c-3.081 3.081-3.081 8.077 0 11.158l11.223 11.223c2.475 2.475 2.975 6.294 1.237 9.332-3.481 6.084-6.223 12.644-8.105 19.559-.918 3.37-3.976 5.708-7.469 5.708h-15.867c-4.357 0-7.89 3.532-7.89 7.89v17.098c0 4.358 3.532 7.89 7.89 7.89h15.867c3.493 0 6.552 2.338 7.469 5.708 1.882 6.915 4.625 13.475 8.105 19.559 1.738 3.038 1.237 6.857-1.237 9.332l-11.223 11.223c-3.081 3.081-3.081 8.077 0 11.158l12.09 12.09c3.081 3.081 8.077 3.081 11.158 0l11.223-11.223c2.475-2.475 6.294-2.975 9.332-1.237 6.084 3.481 12.644 6.223 19.559 8.105 3.37.918 5.709 3.976 5.709 7.469v15.867c0 4.358 3.532 7.89 7.89 7.89h17.098c4.357 0 7.89-3.532 7.89-7.89v-15.867c0-3.493 2.338-6.552 5.709-7.469 6.915-1.882 13.475-4.625 19.559-8.105 3.038-1.738 6.857-1.237 9.332 1.237l11.223 11.223c3.081 3.081 8.077 3.081 11.158 0l12.09-12.09c3.081-3.081 3.081-8.077 0-11.158l-11.223-11.223c-2.475-2.475-2.975-6.294-1.237-9.332 3.481-6.084 6.223-12.644 8.105-19.559.918-3.37 3.976-5.708 7.469-5.708h15.866c4.357 0 7.89-3.532 7.89-7.89v-17.098c0-4.358-3.532-7.89-7.89-7.89zm-104.49 50.947c-19.058 0-34.508-15.45-34.508-34.508s15.45-34.508 34.508-34.508 34.508 15.45 34.508 34.508c-.001 19.058-15.45 34.508-34.508 34.508z" fill="#7a8c98" data-original="#7a8c98"></path>
+                        <path d="m383.3 242.96h-15.865c-3.492 0-6.552-2.339-7.469-5.707-1.885-6.912-4.625-13.475-8.107-19.553-1.741-3.039-1.236-6.861 1.236-9.333l11.229-11.229c3.08-3.08 3.08-8.077 0-11.157l-12.094-12.094c-3.08-3.08-8.076-3.08-11.157 0l-5.821 5.831 6.264 6.263c3.08 3.08 3.08 8.077 0 11.157l-11.229 11.229c-2.472 2.472-2.977 6.295-1.236 9.333 3.482 6.078 6.222 12.64 8.108 19.553.917 3.369 3.977 5.707 7.469 5.707h15.865c4.358 0 7.891 3.533 7.891 7.891v17.101c0 4.358-3.534 7.891-7.891 7.891h-15.865c-3.492 0-6.552 2.339-7.469 5.707-1.885 6.912-4.625 13.475-8.108 19.553-1.741 3.039-1.236 6.861 1.236 9.334l11.229 11.229c3.08 3.08 3.08 8.077 0 11.157l-6.264 6.274 5.821 5.821c3.08 3.08 8.076 3.08 11.157 0l12.094-12.094c3.08-3.08 3.08-8.077 0-11.157l-11.229-11.229c-2.472-2.472-2.977-6.295-1.236-9.334 3.482-6.078 6.222-12.64 8.107-19.553.917-3.369 3.977-5.707 7.469-5.707h15.865c4.358 0 7.891-3.533 7.891-7.891v-17.101c0-4.358-3.534-7.892-7.891-7.892zm-82.343-64.716c-3.369-.917-5.707-3.976-5.707-7.469v-15.865c0-4.358-3.534-7.891-7.891-7.891h-17.101c-1.01 0-1.968.186-2.854.536 2.946 1.144 5.037 4.008 5.037 7.356v15.865c0 3.492 2.339 6.552 5.707 7.469 6.913 1.884 22.809-.001 22.809-.001zm-22.808 162.315c-3.369.917-5.707 3.977-5.707 7.469v15.865c0 3.348-2.091 6.212-5.037 7.356.886.35 1.844.536 2.854.536h17.101c4.358 0 7.891-3.534 7.891-7.891v-15.865c0-3.492 2.339-6.552 5.707-7.469-.001-.001-15.897-1.886-22.809-.001zm-63.851-8.107c-3.039-1.741-6.861-1.236-9.334 1.236l-5.398 5.398 5.821 5.831c3.08 3.08 8.077 3.08 11.157 0l7.644-7.644c-3.42-1.391-6.717-3.008-9.89-4.821zm2.246-158.566c-3.08-3.08-8.077-3.08-11.157.01l-5.821 5.821 5.398 5.398c2.472 2.472 6.295 2.977 9.334 1.236 3.173-1.813 6.47-3.431 9.89-4.821z" fill="#6b7e89" data-original="#6b7e89"></path>
+                        <g>
+                          <path d="m441.537 96.675c-26.037-26.037-57.212-45.071-91.244-56.143-4.537-1.476-9.2 1.89-9.2 6.662v17.574c0 2.95 1.847 5.59 4.625 6.581 54.812 19.561 98.647 62.451 119.476 116.651 1.036 2.695 3.634 4.463 6.521 4.463h17.735c4.829 0 8.214-4.772 6.618-9.33-11.266-32.171-29.715-61.652-54.531-86.458zm26.867 225.15c-19.285 58.421-64.872 104.992-122.668 125.623-2.785.994-4.644 3.63-4.644 6.588v17.574c0 4.771 4.663 8.138 9.2 6.662 34.033-11.072 65.207-30.106 91.244-56.143 27.265-27.265 46.855-60.167 57.661-96.079 1.353-4.498-2.018-9.031-6.715-9.031h-17.434c-3.021-.001-5.697 1.938-6.644 4.806zm-376.18 24.24c-4.943 1.716-10.078 3.021-15.364 3.871-4.627.744-7.261 5.729-5.214 9.945 11.063 22.788 25.999 43.81 44.437 62.248 26.037 26.037 57.211 45.071 91.244 56.143 4.537 1.476 9.2-1.89 9.2-6.662v-17.574c0-2.958-1.86-5.594-4.645-6.588-48.32-17.246-88.105-52.621-111.121-97.9-1.591-3.13-5.221-4.634-8.537-3.483z" fill="#d8ecfe" data-original="#d8ecfe"></path>
+                        </g>
+                        <g>
+                          <g fill="#c4e2ff">
+                            <path d="m418.13 96.675c24.816 24.807 43.266 54.288 54.532 86.459 1.257 3.588-.581 7.3-3.774 8.72.875.387 1.831.61 2.827.61h17.735c4.829 0 8.214-4.773 6.618-9.33-11.266-32.171-29.715-61.652-54.531-86.459-26.037-26.037-57.212-45.071-91.244-56.143-4.068-1.323-8.226 1.25-9.045 5.234 28.444 11.423 54.556 28.582 76.882 50.909z" fill="#c4e2ff" data-original="#c4e2ff"></path>
+                            <path d="m492.482 317.018h-17.434c-1.055 0-2.062.249-2.974.679 3 1.424 4.758 4.894 3.717 8.353-10.805 35.912-30.396 68.814-57.661 96.079-22.326 22.326-48.438 39.486-76.883 50.909.819 3.984 4.977 6.558 9.045 5.234 34.033-11.072 65.207-30.106 91.244-56.143 27.265-27.265 46.855-60.167 57.66-96.079 1.355-4.498-2.016-9.032-6.714-9.032z" fill="#c4e2ff" data-original="#c4e2ff"></path>
+                            <path d="m211.882 447.448c-48.32-17.246-88.105-52.621-111.121-97.9-1.591-3.13-5.22-4.634-8.537-3.483-4.943 1.716-10.078 3.021-15.364 3.871-1.407.226-2.626.848-3.589 1.718 2.916-.431 5.781 1.112 7.296 3.787 24.261 42.852 59.588 74.76 107.908 92.007 2.786.994 4.645 3.63 4.645 6.588v10.133c0 3.346-2.295 5.992-5.229 6.772 6.361 2.735 12.843 5.187 19.435 7.331 4.537 1.476 9.2-1.89 9.2-6.662v-17.574c.001-2.958-1.859-5.594-4.644-6.588z" fill="#c4e2ff" data-original="#c4e2ff"></path>
+                          </g>
+                        </g>
+                        <g>
+                          <path d="m293.492 72.544h-26.766c-6.373 0-11.54-5.166-11.54-11.54v-26.765c0-6.373 5.166-11.54 11.54-11.54h26.766c6.373 0 11.54 5.166 11.54 11.54v26.766c-.001 6.373-5.167 11.539-11.54 11.539z" fill="#8ac9fe" data-original="#8ac9fe"></path>
+                          <path d="m305.026 34.235v26.774c0 6.367-5.161 11.538-11.538 11.538h-25.085c6.377 0 11.538-5.172 11.538-11.538v-26.774c0-6.366-5.161-11.538-11.538-11.538h25.085c6.377 0 11.538 5.172 11.538 11.538z" fill="#60b7ff" data-original="#60b7ff"></path>
+                          <path d="m293.492 496.105h-26.766c-6.373 0-11.54-5.166-11.54-11.54v-26.766c0-6.373 5.166-11.54 11.54-11.54h26.766c6.373 0 11.54 5.166 11.54 11.54v26.766c-.001 6.373-5.167 11.54-11.54 11.54z" fill="#fee45a" data-original="#fee45a"></path>
+                          <path d="m305.026 457.794v26.774c0 6.366-5.161 11.538-11.538 11.538h-25.085c6.377 0 11.538-5.172 11.538-11.538v-26.774c0-6.367-5.161-11.538-11.538-11.538h25.085c6.377 0 11.538 5.172 11.538 11.538z" fill="#fed402" data-original="#fed402"></path>
+                        </g>
+                        <path d="m500.46 277.944h-26.766c-6.373 0-11.54-5.166-11.54-11.54v-26.766c0-6.373 5.166-11.54 11.54-11.54h26.766c6.373 0 11.54 5.166 11.54 11.54v26.766c0 6.373-5.166 11.54-11.54 11.54z" fill="#e759aa" data-original="#e759aa"></path>
+                        <path d="m512 239.643v26.764c0 6.366-5.172 11.538-11.538 11.538h-25.085c6.366 0 11.538-5.172 11.538-11.538v-26.764c0-6.377-5.172-11.548-11.538-11.548h25.085c6.366 0 11.538 5.171 11.538 11.548z" fill="#dd4aa5" data-original="#dd4aa5"></path>
+                        <circle cx="62.212" cy="259.402" fill="#80d261" r="62.212" data-original="#80d261"></circle>
+                        <path d="m62.212 197.19c-5.505 0-10.84.723-15.923 2.065 26.643 7.035 46.289 31.293 46.289 60.147s-19.646 53.112-46.289 60.147c5.083 1.342 10.418 2.065 15.923 2.065 34.359 0 62.212-27.853 62.212-62.212s-27.853-62.212-62.212-62.212z" fill="#62c13a" data-original="#62c13a"></path>
+                        <g>
+                          <path d="m55.046 280.686c-2.049 0-4.014-.814-5.464-2.263l-12.784-12.784c-3.017-3.018-3.017-7.909.001-10.927 3.017-3.018 7.909-3.017 10.927 0l7.32 7.32 21.652-21.652c3.018-3.017 7.909-3.017 10.928 0 3.017 3.017 3.017 7.909 0 10.927l-27.116 27.116c-1.45 1.449-3.414 2.263-5.464 2.263z" fill="#d8ecfe" data-original="#d8ecfe"></path>
+                        </g>
+                        <path d="m226.389 52.52c2.209-2.632 2.579-7.301-.511-10.362l-24.002-24.002c-3.018-3.017-7.909-3.017-10.928 0-3.017 3.017-3.017 7.909 0 10.927l10.813 10.812h-58.771c-4.268 0-7.726 3.459-7.726 7.726s3.459 7.726 7.726 7.726h58.771l-10.812 10.813c-3.017 3.017-3.017 7.909 0 10.927 1.509 1.509 3.487 2.263 5.464 2.263s3.955-.755 5.464-2.263l24.002-24.002c.215-.227.008-.007.51-.565z" fill="#c4e2ff" data-original="#c4e2ff"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-feature-body">
+                <h3 class="feature-title">Transparency of Work Process</h3>
+
+                <p class="feature-text">
+                  How would you feel if the agency you awarded the project
+                  is not transparent with you? Not good for sure! We update visible progress,
+                  images, task gist frequently with our clens. The whole development and design
+                  process is transparent to our clients.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="card-feature feature-4">
+              <div class="card-feature-header">
+                <div class="card-cap">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g>
+                      <g xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <g>
+                            <path d="m239.864 75.654-239.864 46.484v292.938c0 34.051 27.86 61.91 61.91 61.91h356.201c34.051 0 61.91-27.86 61.91-61.91v-292.938z" fill="#f5f8ff" data-original="#f5f8ff"></path>
+                          </g>
+                          <g>
+                            <path d="m99.241 415.076v-312.17l-99.241 19.232v292.938c0 34.051 27.86 61.91 61.91 61.91h99.241c-34.05 0-61.91-27.86-61.91-61.91z" fill="#deeeff" data-original="#deeeff"></path>
+                          </g>
+                          <g>
+                            <path d="m418.111.064h-356.201c-34.05 0-61.91 27.86-61.91 61.91v60.164h480.021v-60.164c0-34.05-27.86-61.91-61.91-61.91z" fill="#ffaaa1" data-original="#ffaaa1"></path>
+                          </g>
+                          <g>
+                            <path d="m99.241 61.974c0-34.051 27.86-61.91 61.91-61.91h-99.241c-34.05 0-61.91 27.86-61.91 61.91v60.164h99.241z" fill="#ff938a" data-original="#ff938a"></path>
+                          </g>
+                          <g>
+                            <circle cx="67.837" cy="62.87" fill="#f5f8ff" r="24.487" data-original="#f5f8ff"></circle>
+                          </g>
+                          <g>
+                            <circle cx="153.924" cy="62.87" fill="#f5f8ff" r="24.487" data-original="#f5f8ff"></circle>
+                          </g>
+                          <g>
+                            <circle cx="240.011" cy="62.87" fill="#f5f8ff" r="24.487" data-original="#f5f8ff"></circle>
+                          </g>
+                          <g>
+                            <circle cx="326.097" cy="62.87" fill="#f5f8ff" r="24.487" data-original="#f5f8ff"></circle>
+                          </g>
+                          <g>
+                            <g>
+                              <path d="m92.035 231.688c-1.909 0-3.755-.729-5.152-2.05l-10.314-9.751c-3.01-2.846-3.143-7.593-.298-10.603 2.846-3.009 7.592-3.143 10.603-.298l4.388 4.148 14.001-17.54c2.584-3.237 7.303-3.768 10.54-1.183 3.237 2.584 3.767 7.303 1.183 10.54l-19.089 23.914c-1.309 1.64-3.245 2.656-5.337 2.803-.176.014-.351.02-.525.02z" fill="#7dce5c" data-original="#7dce5c"></path>
+                            </g>
+                            <g>
+                              <path d="m92.035 317.198c-1.909 0-3.755-.729-5.152-2.05l-10.314-9.751c-3.01-2.846-3.143-7.593-.297-10.603 2.844-3.011 7.591-3.144 10.602-.298l4.388 4.149 14.001-17.54c2.584-3.237 7.303-3.768 10.54-1.183 3.237 2.584 3.767 7.303 1.183 10.54l-19.089 23.914c-1.309 1.64-3.245 2.656-5.337 2.803-.176.013-.351.019-.525.019z" fill="#7dce5c" data-original="#7dce5c"></path>
+                            </g>
+                            <g>
+                              <path d="m186.062 317.597c-1.909 0-3.755-.729-5.152-2.05l-10.314-9.751c-3.01-2.846-3.143-7.593-.297-10.603 2.845-3.01 7.592-3.143 10.602-.298l4.388 4.149 5.979-7.49c2.584-3.237 7.303-3.768 10.54-1.183 3.237 2.584 3.767 7.303 1.183 10.54l-11.067 13.864c-1.309 1.64-3.245 2.656-5.337 2.803-.176.013-.351.019-.525.019z" fill="#7dce5c" data-original="#7dce5c"></path>
+                            </g>
+                            <g>
+                              <path d="m186.062 402.311c-1.909 0-3.755-.729-5.152-2.05l-10.314-9.751c-3.01-2.846-3.143-7.593-.297-10.603 2.845-3.01 7.591-3.144 10.602-.297l4.388 4.148 5.845-7.322c2.584-3.237 7.303-3.768 10.54-1.183 3.237 2.584 3.767 7.303 1.183 10.54l-10.933 13.696c-1.309 1.64-3.245 2.656-5.337 2.803-.176.013-.351.019-.525.019z" fill="#7dce5c" data-original="#7dce5c"></path>
+                            </g>
+                            <path d="m438.128 196.253c-2.666-19.788-19.753-34.71-39.746-34.71h-316.743c-22.115 0-40.107 17.992-40.107 40.107v191.47c0 22.116 17.992 40.108 40.107 40.108h116.671c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-48.087v-20.643c0-4.142-3.358-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v20.643h-53.584c-13.844 0-25.107-11.263-25.107-25.108v-46.189h78.691v17.431c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-17.431h47.683c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-47.683v-69.091h47.683c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-47.683v-71.297h82.288v22.311c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-22.311h82.287v22.311c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-22.311h53.584c12.517 0 23.213 9.335 24.881 21.713.553 4.105 4.337 6.984 8.435 6.431 4.104-.552 6.984-4.329 6.43-8.434zm-302.905 135.678h-78.691v-69.091h78.691zm0-84.091h-78.691v-46.19c0-13.844 11.263-25.107 25.107-25.107h53.584z" fill="#d3dcfb" data-original="#d3dcfb" class=""></path>
+                          </g>
+                          <g>
+                            <path d="m467.182 198.854h-43.515l-68.208 60.687-68.208-60.687h-43.515c-24.65 0-44.818 20.168-44.818 44.818v223.446c0 24.65 20.168 44.818 44.818 44.818h223.446c24.65 0 44.818-20.168 44.818-44.818v-223.446c0-24.65-20.168-44.818-44.818-44.818z" fill="#fce3a0" data-original="#fce3a0" class=""></path>
+                          </g>
+                          <g>
+                            <path d="m301.599 467.118v-223.447c0-9.298 2.873-17.957 7.77-25.138l-22.118-19.68h-43.515c-24.65 0-44.818 20.168-44.818 44.818v223.447c0 24.65 20.168 44.818 44.818 44.818h102.681c-24.65 0-44.818-20.168-44.818-44.818z" fill="#f9d171" data-original="#f9d171"></path>
+                          </g>
+                          <g>
+                            <circle cx="412.184" cy="62.87" fill="#f5f8ff" r="24.487" data-original="#f5f8ff"></circle>
+                          </g>
+                          <g>
+                            <path d="m287.251 198.854v126.647c0 19.646 21.867 31.39 38.245 20.539l16.356-10.836c8.249-5.465 18.966-5.465 27.215 0l16.355 10.836c16.378 10.85 38.245-.893 38.245-20.539v-126.647z" fill="#fffae6" data-original="#fffae6"></path>
+                          </g>
+                          <g>
+                            <g>
+                              <path d="m345.206 325.501v-126.647h-57.955v126.647c0 19.646 21.867 31.39 38.245 20.539l16.356-10.836c1.421-.941 2.918-1.708 4.46-2.325-.709-2.299-1.106-4.766-1.106-7.378z" fill="#fff0b3" data-original="#fff0b3" class=""></path>
+                            </g>
+                          </g>
+                          <g>
+                            <path d="m468.375 432.105-28.98-44.845c-6.016-9.31-19.636-9.31-25.652 0l-28.98 44.845c-3.126 4.838.346 11.216 6.106 11.216h3.9c3.642 0 6.594 2.952 6.594 6.594v13.042c0 5.827 4.724 10.551 10.551 10.551h29.309c5.827 0 10.551-4.724 10.551-10.551v-13.042c0-3.642 2.952-6.594 6.594-6.594h3.9c5.76 0 9.233-6.379 6.107-11.216z" fill="#ffffff" data-original="#ffffff"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="card-feature-body">
+                <h3 class="feature-title">Timely Product Delivery</h3>
+
+                <p class="feature-text">
+                  We know how important the time is for a product to go live
+                  and plan business accordingly. We commit on time delivery for the project we
+                  took on hand. Throughout the whole process the client has the whole timeline in
+                  picture.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- HOME-FEATURES BODY END -->
+    </div>
+  </div>
+</section>
 
     <section class="video-section">
         <div class="video-container">
@@ -349,6 +1031,10 @@
               <p>&copy; 2024 Qtec - SRS - All rights reserved.</p>
             </div>
           </footer>
-          
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
